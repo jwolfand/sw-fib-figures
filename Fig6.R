@@ -89,6 +89,7 @@ CreateFig1 <- function (data, pct) {
       axis.title.x = element_blank(),
       axis.title.y = element_blank(),
       text = element_text(size = 16),
+      plot.margin = margin(5, 45, 5, 5),
       legend.position = "none"
     )
   
@@ -123,6 +124,7 @@ CreateFig2 <- function (data, pct) {
       plot.title = element_text(hjust = 0.5),
       axis.title.x = element_blank(),
       axis.title.y = element_blank(),
+      plot.margin = margin(5, 25, 5, 20),
       text = element_text(size = 16),
       legend.position = "none"
     ) + geom_vline(xintercept = 71074 * conv,
@@ -132,10 +134,10 @@ CreateFig2 <- function (data, pct) {
 }
 
 ### FIGURE 6 - 8 PANELS OF WW EXCEEDANCES AND LOAD REDUCTION (100, 95, 75, 50 % TREATED)
-p1 <- CreateFig1(noinf, 100)
-p2 <- CreateFig1(noinf, 95)
-p3 <- CreateFig1(noinf, 75)
-p4 <- CreateFig1(noinf, 50)
+p1 <- CreateFig1(withinf, 100)
+p2 <- CreateFig1(withinf, 95)
+p3 <- CreateFig1(withinf, 75)
+p4 <- CreateFig1(withinf, 50)
 p5 <- CreateFig2(withinf, 100)
 p6 <- CreateFig2(withinf, 95)
 p7 <- CreateFig2(withinf, 75)
@@ -146,7 +148,7 @@ svg(
     date,
     "_Fig_6.svg"
   ),
-  width = 10,
+  width = 12,
   height = 10
 )
 q2 <- multiplot(p1, p2, p3, p4, p5, p6, p7, p8, cols = 2)
@@ -163,7 +165,7 @@ svg(
     date,
     "_Fig_S3.svg"
   ),
-  width = 10,
+  width = 8,
   height = 5
 )
 q2 <- multiplot(p1, p2, p3, p4, cols = 2)

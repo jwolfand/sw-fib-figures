@@ -1,0 +1,3 @@
+cd C:\Program Files\ImageMagick-7.0.7-Q16
+magick.exe convert -size 2000x2000 C:\Sustain\Projects\Ballona\sw-fib-figures\Figures\2018-04-24_Fig_6.svg C:\Sustain\Projects\Ballona\sw-fib-figures\Figures\2018-04-24_Fig_6.png
+magick.exe convert -size 2000x2000 C:\Sustain\Projects\Ballona\sw-fib-figures\Figures\2018-04-24_Fig_S3.svg C:\Sustain\Projects\Ballona\sw-fib-figures\Figures\2018-04-24_Fig_S3.png
