@@ -10,12 +10,11 @@ library(akima)
 # User-entered constants
 mult <- 43.44083342/10^6 #Conversion factor from units to m^3
 mass.in <- 4.10e+22
-date = "171207"
 colorstring = c("yellow", "green", "dodgerblue3")
 lblsize <- 10
 
 inf = read.table("Output/withinf_2017-12-19.txt", header = T)
-noinf = read.table("Output/noinf_2017-12-19.txt", header = T)
+noinf = read.table("Output/noinf_2018-04-25.txt", header = T)
 inf$pct.rem = (mass.in - inf$mass.load) / mass.in * 100
 noinf$pct.rem = (mass.in - noinf$mass.load) / mass.in * 100
 
